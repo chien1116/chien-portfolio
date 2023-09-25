@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Noto+Sans+TC:wght@400;600;800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f5f5f5;
+}
+
+.title_big {
+  font-family: "Alfa Slab One";
+  letter-spacing: 1px;
+  color: #ff6339;
+}
+
+.title_md {
+  font-size: 36PX;
+}
+
+.title_sm {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.title_header {
+  font-family: "Alfa Slab One";
+  font-size: 28px;
+  color: #ff6339;
+}
+
+.scroll-nav {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+* {
+  outline: solid 1px red;
+}
+
+.wrapper {
+  font-size: 16px;
+  background-image: url(../images/bg.jpg);
+}
+
+.image {
+  font-size: 0;
+}
+.image img {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 10vw;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 20px rgba(51, 51, 51, 0.2);
+}
+
+.header_name {
+  font-family: serif;
+}
+
+.header_menu_list {
+  display: flex;
+}
+.header_menu_list li {
+  padding: 12px;
+}
+.header_menu_list .scroll-nav {
+  color: #333;
+}
+
+.layer {
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lead {
+  padding: 8px 0;
+}
+
+.fa-chevron-down {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  color: #f5f5f5;
+  border: solid 1px #f5f5f5;
+  transition: 0.5s;
+}
+.fa-chevron-down:hover {
+  color: #ff6339;
+  border-color: #ff6339;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 60px 0;
+}
+
+.myName {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 600;
+  padding: 20px 0;
+}

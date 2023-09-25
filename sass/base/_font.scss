@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+// font-family: 'Noto Sans TC', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Noto+Sans+TC:wght@400;600;800&display=swap');
+
+
+
+body{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:$white;
+}
+.title_big{
+    font-family: 'Alfa Slab One';
+    letter-spacing: 1px;
+    color: $red;
+}
+.title_md{
+    font-size: 36PX;
+}
+.title_sm{
+    font-size: 24px;
+}
+
+h1{
+    font-size: 36px;
+}
+
+.title_header{
+    font-family: 'Alfa Slab One';
+    font-size: 28px;
+    color: $red;
+}
+.scroll-nav{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.text-center{
+    text-align: center;
+}

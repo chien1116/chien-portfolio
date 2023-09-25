@@ -1,0 +1,102 @@
+
+@import './reset/reset';
+@import './base/color';
+@import './base/font';
+@import './mixin/mixin';
+
+//layout
+// @import './layout/header';
+// @import './layout/footer';
+
+//
+$padding-t:0 18.75vw;
+$padding-p:0 10vw;
+
+
+
+//index
+
+*{
+    outline: solid 1px red;
+}
+
+
+.wrapper{
+    font-size: 16px;
+    background-image: url(../images/bg.jpg);
+    
+}
+
+.image{
+    font-size: 0;
+    img{
+        width: 100%;
+    }
+}
+
+//header
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // JS控制 scroll
+    height: 80px;
+    width: 100%;
+    padding: $padding-p;
+    font-size: 20px;
+    // JS控制 scroll
+    background-color: $white;
+    box-shadow: 0 2px 20px rgba($black,.2);
+}
+.header_name{
+    font-family: serif;
+}
+
+.header_menu_list{
+    display: flex;
+    li{
+        padding: 12px;
+    }
+    .scroll-nav{
+        color: $black;
+    }
+}
+
+// #home
+.layer{
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lead{
+    padding: 8px 0;
+}
+.fa-chevron-down{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    color: $white;
+    border: solid 1px $white;
+    transition:.5s;
+    &:hover{
+        color: $red;
+        border-color: $red;;
+    }
+}
+.photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 60px 0;
+}
+.myName{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 600;
+    padding: 20px 0;
+}
