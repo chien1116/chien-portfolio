@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
-
+//font-family: 'Alfa Slab One'
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 // font-family: 'Noto Sans TC', sans-serif;
@@ -9,24 +7,34 @@
 
 
 body{
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color:$white;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .title_big{
-    font-family: 'Alfa Slab One';
+    font-family: 'Alfa Slab One','Noto Sans TC';
     letter-spacing: 1px;
     color: $red;
+    font-size: 32px;
+    text-align: center;
 }
 .title_md{
-    font-size: 36PX;
+    font-size: 28PX;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 .title_sm{
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+p{
+    // font-size: 16px;
+    line-height: 1.6;
+}
+.important-text{
+    color: $red;
 }
 
-h1{
-    font-size: 36px;
-}
 
 .title_header{
     font-family: 'Alfa Slab One';

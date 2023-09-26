@@ -9,29 +9,40 @@
 // @import './layout/footer';
 
 //
-$padding-t:0 18.75vw;
-$padding-p:0 10vw;
+$padding-t:18.75vw;
+$padding-p:10vw;
 
 
 
 //index
 
-*{
-    outline: solid 1px red;
-}
+*{outline: solid 1px red;}
 
 
 .wrapper{
     font-size: 16px;
     background-image: url(../images/bg.jpg);
+    background-size: cover;
     
 }
-
+section{
+    width: 100%;
+    padding: 80px $padding-t;
+}
+a{
+    color: $white;
+}
 .image{
     font-size: 0;
     img{
         width: 100%;
     }
+}
+.line{
+    width: 80px;
+    height: 2px;
+    background-color: $red;
+    margin: 12px auto 40px;
 }
 
 //header
@@ -42,7 +53,7 @@ $padding-p:0 10vw;
     // JS控制 scroll
     height: 80px;
     width: 100%;
-    padding: $padding-p;
+    padding:0 $padding-p;
     font-size: 20px;
     // JS控制 scroll
     background-color: $white;
@@ -99,4 +110,89 @@ $padding-p:0 10vw;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 600;
     padding: 20px 0;
+}
+//about
+//skill
+.skill{
+    
+}
+.section_skills{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skill_block{
+    border: solid 5px rgba($white,.2);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &.back-end,&.software-dev{
+        width: 46%;
+        margin: 40px 0;
+    }
+    ul{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    li{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        i{
+            width: 32px;
+            font-size: 28px;
+            margin-right: 12px;
+            color: rgba($red,.5);
+        }
+        .skill_logo{
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            background-color:$white;
+            border-radius: 4px;
+            margin-right: 20px;
+            background-color: rgba($red,.5);
+        }
+        p{
+
+        }
+    }
+}
+//Portfolio
+.Portfolio{
+
+}
+.section_projects{
+
+}
+.portfolio-item{
+    width: 100%;
+    display: flex;
+    
+    .image{
+      opacity:.5;        
+    }
+    .title_big{
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 40px;
+
+    }
+    .portfolio-description{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+    }
 }
