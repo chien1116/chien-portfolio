@@ -31,8 +31,11 @@ p{
     // font-size: 16px;
     line-height: 1.6;
 }
+
 .important-text{
+    font-weight: 600;
     color: $red;
+    display: inline-block;
 }
 
 

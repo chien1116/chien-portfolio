@@ -97,7 +97,9 @@ p {
 }
 
 .important-text {
+  font-weight: 600;
   color: #ff6339;
+  display: inline-block;
 }
 
 .title_header {
@@ -149,6 +151,29 @@ a {
   margin: 12px auto 40px;
 }
 
+.none {
+  display: none;
+}
+
+.text_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: rgba(255, 99, 57, 0.5);
+  margin-right: 16px;
+}
+
+@keyframes bounce {
+  25% {
+    transform: translateY(0.25rem);
+  }
+  75% {
+    transform: translateY(-0.25rem);
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -265,22 +290,248 @@ a {
   margin-right: 20px;
   background-color: rgba(255, 99, 57, 0.5);
 }
-.portfolio-item {
-  width: 100%;
+
+.portfolio .card {
   display: flex;
+  max-width: 720px;
+  max-height: 320px;
+  margin: 0 auto;
+}
+.portfolio .card:hover .image {
+  left: 0;
+  opacity: 1;
+}
+.portfolio .card:hover .title_big {
+  left: 0;
+}
+
+.portfolio-item {
+  margin-bottom: 80px;
 }
 .portfolio-item .image {
+  transition: 0.5s;
+  position: relative;
+  left: 50px;
   opacity: 0.5;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.portfolio-item .image img {
+  width: 100%;
 }
 .portfolio-item .title_big {
-  color: #fff;
-  font-size: 30px;
-  margin-bottom: 40px;
+  transition: 0.8s;
+  color: #f5f5f5;
+  font-size: 36px;
+  text-align: left;
+  position: relative;
+  left: -80px;
 }
 .portfolio-item .portfolio-description {
-  padding: 20px;
+  padding: 32px 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  width: 50%;
+}
+.portfolio-item .btns {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.portfolio-item .btn {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.portfolio-item .btn:hover i {
+  color: #ff6339;
+  transition: 0.5s;
+}
+.portfolio-item .btn p {
+  margin-right: 12px;
+}
+.portfolio-item .btn i {
+  font-size: 24px;
+  margin-right: 24px;
+}
+
+.project-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-info .line {
+  background-color: #fff;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+.project-info .title_sm {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-info .title_sm:hover {
+  cursor: pointer;
+}
+.project-info .title_sm:hover i {
+  animation: bounce 0.5s infinite;
+  color: #ff6339;
+}
+.project-info .title_sm i {
+  margin: 0;
+  border: none;
+  font-size: 12px;
+}
+.project-info .tools {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.project-info .tools p {
+  color: #ff6339;
+}
+.project-info .methods {
+  line-height: 1.6;
+  width: 100%;
+}
+.project-info ol {
+  width: 720px;
+  margin: 0 auto;
+}
+.project-info li {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 12px;
+}
+
+.gizmo {
+  padding: 40px 10vw;
+  position: relative;
+}
+.gizmo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.1) 80%, rgba(0, 0, 0, 0.8) 90%, rgb(0, 0, 0) 100%);
+}
+
+.gizmo_theme {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gizmo_item {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.gizmo_item:hover .image::after {
+  bottom: 0;
+}
+.gizmo_item:hover .gizmo_info {
+  bottom: 0;
+}
+.gizmo_item:hover .image img {
+  transform: scale(1.2);
+}
+.gizmo_item:hover .fa-eye {
+  opacity: 0;
+}
+.gizmo_item .image {
+  position: relative;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gizmo_item .image::after {
+  transition: 0.8s ease-in;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+}
+.gizmo_item .image img {
+  width: auto;
+  transition: 1s;
+  height: 100%;
+}
+.gizmo_item .image .fa-eye {
+  transition: 0.5s ease-out;
+  color: #f5f5f5;
+  position: absolute;
+  z-index: 100;
+  font-size: 20px;
+  background-color: rgba(255, 99, 57, 0.5);
+  padding: 8px;
+  border-radius: 12px;
+}
+.gizmo_item .gizmo_info {
+  transition: 1.2s ease-in-out;
+  padding: 20px;
+  position: absolute;
+  bottom: -400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gizmo_item .gizmo_info .info_text {
+  line-height: 1.6;
+  font-size: 14px;
+}
+.gizmo_item .gizmo_info i {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #ff6339;
+}
+
+.careers .job {
+  display: flex;
+  flex-direction: column;
+}
+.careers .job ol {
+  width: 80%;
+  margin: 0 auto;
+}
+.careers .job li {
+  display: flex;
+  padding-bottom: 12px;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+.careers .jobName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.careers .jobName:hover i {
+  animation: bounce 0.5s infinite;
+  color: #ff6339;
+}
+.careers .jobName .title_sm {
+  padding: 40px 0;
+  margin: 0;
+}
+.careers .jobName i {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.careers .period {
+  text-align: center;
 }

@@ -12,6 +12,10 @@
 
 </head>
 <body>
+    <!-- 滑鼠游標效果 -->
+    <!-- <div class="cursor"></div>
+    <div class="cursor-follower"></div> -->
+
     <div class="wrapper">
         <!-- header -->
         <header class="header">
@@ -21,8 +25,8 @@
                     <li><a href="#about" class="scroll-nav">About</a></li>
                     <li><a href="#skill" class="scroll-nav">Skill</a></li>
                     <li><a href="#portfolio" class="scroll-nav">Portfolio</a></li>
-                    <li><a href="#careers" class="scroll-nav">careers</a></li>
-                    <li><a href="#contact" class="scroll-nav">contact</a></li>
+                    <li><a href="#careers" class="scroll-nav">Careers</a></li>
+                    <li><a href="#contact" class="scroll-nav">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -43,7 +47,7 @@
                         <div class="title_sm myName">簡恒柔</div>
                     </h1>
                     <p class="lead">Front-End Developer and UX/UI designer</p>
-                    <a href="#skill" class="scroll-nav">
+                    <a href="#about" class="scroll-nav">
                         <i class="fa-solid fa-chevron-down"></i>
                     </a>
                 </div>
@@ -185,49 +189,313 @@
 
             <!-- Portfolio -->
             <section>  
-                <div id="Portfolio" class="Portfolio">
+                <div id="portfolio" class="portfolio">
+
                     <div class="title_big">PORTFOLIO</div>
                     <div class="line"></div>
 
                     <div class="section_projects">
                         <!-- project1 -->
                         <div class="portfolio-item project1">
-
-                            <div class="image">
-                              <img src="https://mzeppieri.com/wp-content/uploads/2018/08/adv-phorma-featured-img.png">
+                            <div class="card">
+                                <div class="image">
+                                  <img src="./images/HAKO-image.png">
+                                </div>
+    
+                                <div class="portfolio-description">
+                                  <h3 class="title_big">HAKO 盒食</h3>
+                                  <p><span class="important-text">HAKO盒食</span>是以 Vue.js + PHP + MySQL 開發的電商平台Demo，用戶在web上可以註冊或登入帳號，進行預約活動、訂購商品至購物車、進行結帳，並可察看使用者過去訂單資訊。設計此網站的動機是為了實踐對於建立軟體專案熟悉度並架設功能完整的網站。</p>
+    
+                                  <div class="btns">
+                                    
+                                      <a href="#" target="_blank" class="btn visit" id="btn_visit">
+                                        <p>Visit the Web</p>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                      </a>
+    
+                                      <a href="#" target="_blank" class="btn github" id="btn_github">
+                                          <p>GitHub</p>
+                                          <i class="fa-brands fa-github"></i> 
+                                      </a>
+    
+                                  </div>
+                                </div>
                             </div>
-                            <div class="portfolio-description">
-                              <h3 class="title_big">Lorem Ipsum Dolor Sit Amen</h3>
-                              <p>專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹</p>
-
-                              <div class="btn_visits">
-                                
-                                  <a href="#" target="_blank" class="btn">
-                                    <p>Visit the Web</p>
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                  </a>
-
-                                  <a href="#" target="_blank" class="btn">
-                                      <p>GitHub</p>
-                                      <i class="fa-brands fa-github"></i> 
-                                  </a>
-                                  
-                              </div>
+                            <div class="project-info">
+                                <div class="tools">
+                                    <div class="title_sm">
+                                        Tools
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="none">SCSS(SASS), Vue.js, PHP, MySQL</p>
+                                </div>
+                                <div class="methods">
+                                    <div class="title_sm">
+                                        Methods
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="line"></div>
+                                    <ol class="none">
+                                        <li><span class="text_circle">1</span>透過 AJAX(axios) 技術建構商品fullCRUD 新增, 瀏覽, 編輯和刪除的功能。</li>
+                                        <li><span class="text_circle">2</span>將MySQL作為網頁數據庫, 使用PHP的MySQL語法及PDO來執行數據庫查詢和操作。</li>
+                                        <li><span class="text_circle">3</span>使用一對多關係將user, product, order三種關係的數據連結。</li>
+                                        <li><span class="text_circle">4</span>localStorge實現登出狀態加入購物車功能 ; 使用is.js工具驗證收件人資料 ; 驗證成功後AJAX回傳資料庫訂單數據。</li>
+                                        <li><span class="text_circle">5</span>透過SCSS界定component樣式 ; GSAP 實現視差滾動效果。</li>
+                                    </ol>
+                                </div>
                             </div>
-
-
                         </div>
 
                         <!-- project2 -->
-                        
+                        <div class="portfolio-item project2">
+                            <div class="card">
+                                <div class="image">
+                                  <img src="./images/WFW-image.png">
+                                </div>
+    
+                                <div class="portfolio-description">
+                                  <h3 class="title_big">WFW 租賃平台</h3>
+                                  <p><span class="important-text">WFW</span>是一個專為自由工作者及企業所開發的空間租借平台，用戶可以瀏覽與租賃合適的辦公、聚會場所，查看體驗心得與網站規則。設計動機是為了實踐各種UI介面版型與RWD的掌握能力。</p>
+
+                                  <div class="btns">
+                                      <a href="#" target="_blank" class="btn visit" id="btn_visit">
+                                        <p>Visit the Web</p>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                      </a>
+    
+                                      <a href="#" target="_blank" class="btn github" id="btn_github">
+                                          <p>GitHub</p>
+                                          <i class="fa-brands fa-github"></i> 
+                                      </a>
+    
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="tools">
+                                    <div class="title_sm">
+                                        Tools
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="none">HTML5, SCSS(SASS), JS(原生/jquery), Figma</p>
+                                </div>
+                                <div class="methods">
+                                    <div class="title_sm">
+                                        Methods
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="line"></div>
+                                    <ol class="none">
+                                        <li><span class="text_circle">1</span>完整規劃7頁滿版式設計完整網頁 ; 以figma設計wireframe / mockup 繪製網站UI。</li>
+                                        <li><span class="text_circle">2</span>利用對比色做畫面切割變化，分頁做不同版型的組合 ; 區塊面狀及滿版突顯不同重點。</li>
+                                        <li><span class="text_circle">3</span>使用youtube API嵌入影片及輪播套件Owl Carousel生動化頁面資訊。</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--portfolio-->
+            </section>
 
 
+            <!-- gizmo -->
+            <section class="gizmo">
+
+                <div class="title_big">Gizmo</div>
+                <div class="line"></div>
+
+                <div class="gizmo_theme">
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/BavOLRG" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-AJAX-1.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">以pug(jade)撰寫HTML，並透過AJAX(JQuery)從 web API 中抓取隨機的配對資訊，可執行兩階段動態取得更多資訊，此練習目的為API串接及各式語法熟悉度。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/JjmWXyb" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-AJAX-2.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <p class="info_text">練習form中不同input型態; 並以同一介面執行傳統表單post方法及應用jQuery AJAX方法，以觀察傳統方法與AJAX回傳資料差異，並可依使用者滿意度非同步於樣板上顯示相應的response。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/GRXWQMo" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-buyList.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">
+                                    此為簡單的購物清單，藉由特定URL 獲取商品數據後動態顯示在介面上，用戶可以添加、刪除商品，並即時計算總價格; 是一個使用 AJAX 與 JSON 數據進行互動，並實現動態更新網頁的練習。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/MWPwZpE" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-morsecode.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <p class="info_text">
+                                    以 JS 進行字串與陣列的資料處理，透過點擊事件執行獲取input值，執行英文字母及摩斯密碼的轉換功能，並引入兩組音源，播放摩斯密碼的長短音頻，是一個結合JS資料處理及DOM的練習。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/rNZQKPM" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-score.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">
+                                    此為JS互動的飛鏢小遊戲，包含mouse, click, keyboard 事件。使用者通過滑鼠移動獲取座標，點擊不同的元素獲得分數，並透過鍵盤事件重新遊戲及切換遊戲模式。這個小遊戲除了以JS操控DOM元素，同時藉由attr計算基分，並以JS附加class，提供不同模式animation的效果。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/YzOPObg" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-mobile.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">
+                                    此練習可點擊螢幕切換頁面、點擊Home鍵返回首頁、並選擇不同尺寸的手機、震動效果以及手機圖像旋轉功能; 同時引用音效增添互動體驗。這是一個使用click監聽事件來捕獲不同的DOM元素，並操縱其互動效果的練習。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/gOdedgJ" 
+                        target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-count.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">這是一個簡單的秒數計時器，用戶透過滑鼠及鍵盤Event調整計時時間、重置計時器、暫停/開始計時。此練習以setInterval函式執行倒數，並在倒數結束後動態改變畫面。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="gizmo_item">
+                        <a href="https://codepen.io/Chien-C/pen/eYLGper" target="_blank">
+                            <div class="image">
+                                <img src="./images/codepen-monster.png" alt="">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="gizmo_info">
+                                <i class="fa-brands fa-codepen"></i>
+                                <div class="info_text">
+                                    此為載入過程的動畫效果，當頁面加載時，觸發計時器每50毫秒增加載入條的寬度，模擬載入過程。當載入條達到100%時，觸發3秒後執行畫面載入的函式，此練習時間操控函示setInterval、setTimeout。
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
                         
+            <!-- Careers -->
+            <section id="careers" class="careers">  
+                
+                <div class="title_big">CAREERS</div>
+                <div class="line"></div>
+
+                <div class="experience">
+                    <div class="job">
+                        <div class="period">Apr 2020 - Dec 2022</div> 
+                        <div class="jobName">
+                            <div class="title_sm">台灣世曦工程顧問股份有限公司，都市計畫專案工程師</div> 
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ol class="none">
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>
+                                    擔任競標階段策略 統合及擬定，擅長<span class="important-text">資料視覺化及敘事能力</span>，參與競標案共10件，成功得標達成率 90%。
+                                </p>
+                            </li> 
+                            <li>
+                                <span class="text_circle">2</span>
+                                <p>
+                                    公司ISO 9001 計畫稽核員、客戶對接窗口，確保計畫品質，成功取得同業主續約共 5+ 計畫。
+                                </p>
+                            </li>
+                            <li>
+                                <span class="text_circle">3</span>
+                                <p>
+                                    協助參與案件16+件，契約金額最高達 6億8,567萬元，累計金額 11億8千萬元，已結案案件共 7+ 件。
+                                </p>
+                            </li>
+                            <li>
+                                <span class="text_circle">4</span>
+                                <p>
+                                    協助嘉義縣專案獲得<span class="important-text">2020水環境大賞-水樣生活獎。
+                                </p>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text_circle">5</span>
+                                <p>協助促成重點客戶、大學及電信業者 簽訂MOU。</p>
+                            </li>
+                            <li>
+                                <span class="text_circle">6</span>
+                                <p>
+                                    籌設<span class="important-text">科學、科技園區、科技案</span>。
+                                </p>
+                            </li>
+                        </ol>
                     </div>
 
 
+                    
                 </div>
-            </section>
+
+                <div class="performance">
+
+                </div>
+                
+            </section>         
+                        
+
+
+                        
+                    
+
+
+                
         </div><!-- container -->
 
         
@@ -237,9 +505,11 @@
         </footer>
         
     </div><!-- wrapper -->
-        
-    <!-- GSAP3.0 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="./js/all.js"></script>
   
 
 
