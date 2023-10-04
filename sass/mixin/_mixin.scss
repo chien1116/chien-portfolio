@@ -1,4 +1,28 @@
+//================ breakpoint ============================
+//手機板 
+@mixin m() {
+    @media screen and (max-width: $m) {
+        @content;
+    }
+}
+//平板 
+@mixin p() {
+    @media screen and (max-width: $p) {
+        @content;
+    }
+}  
+//電腦1200px
+@mixin t($t:1200px) {
+    @media screen and (max-width: $t) {
+        @content;
+    }
+} 
 
-
+//自己設定
+@mixin d($b){
+    @media screen and (max-width: $b) {
+        @content;
+    }
+}
 
 

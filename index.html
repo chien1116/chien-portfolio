@@ -19,8 +19,14 @@
     <div class="wrapper">
         <!-- header -->
         <header class="header">
-            <a href="home" class="title_header">Chien</a>
+            <a href="#home" class="title_header">Chien</a>
+            
             <nav class="header_menu">
+                <!-- 平板模式出現的bar -->
+                <div class="none header_bar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- 展開的header_menu -->
                 <ul class="header_menu_list">
                     <li><a href="#about" class="scroll-nav">About</a></li>
                     <li><a href="#skill" class="scroll-nav">Skill</a></li>
@@ -37,266 +43,259 @@
 
             <!-- home -->
             <div id="home" class="home text-center">
-                <div class="layer">
-                    <div class="image photo"> 
-                        <img src="./images/portfolio_photo.jpg" alt="">
-                    </div>
-
-                    <h1 class="title_md">Hi I'm  
-                        <span class="title_big">Chien</span>
-                        <div class="title_sm myName">簡恒柔</div>
-                    </h1>
-                    <p class="lead">Front-End Developer and UX/UI designer</p>
-                    <a href="#about" class="scroll-nav">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </a>
+                <div class="image photo"> 
+                    <img src="./images/portfolio_photo.jpg" alt="">
                 </div>
+
+                <h1 class="title_md">Hi I'm  
+                    <span class="title_big">Chien</span>
+                    <div class="title_sm myName">簡恒柔</div>
+                </h1>
+                <p class="lead">Front-End Developer and UX/UI designer</p>
+                <a href="#about" class="scroll-nav">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
             </div>
 
             <!-- about -->
-            <section>  
-                <div id="about" class="about">
-                    <div class="title_big">ABOUT ME</div>
-                    <div class="line"></div>
-                    <P>
-                        具有4年以上專案管理、顧問諮詢、跨部門協作、行銷企劃經驗 ，<span class="important-text">喜歡不斷完善一個專案的完整度</span>。<br> 
-                        自學網頁前端工程相關技術，並參與為期4個月的實體培育課程，提升程式語言與參與團隊開發，<span class="important-text">累積side project和軟工合作經驗</span>。<br> 
-                        團體開發中<span class="important-text">擅長介面設計與專案統籌</span>、享受解決問題的成就感，喜愛透過知識分享與同儕相互成長，期望將跨部門協作經驗於軟體協作中落實，成為互相激勵的團隊一份子。
-                    </P>
-                </div>
+            <section id="about" class="about">  
+                <div class="title_big">ABOUT ME</div>
+                <div class="line"></div>
+                <P>
+                    具有4年以上專案管理、顧問諮詢、跨部門協作、行銷企劃經驗 ，<span class="important-text">喜歡不斷完善一個專案的完整度</span>。<br> 
+                    自學網頁前端工程相關技術，並參與為期4個月的實體培育課程，提升程式語言與參與團隊開發，<span class="important-text">累積side project和軟工合作經驗</span>。<br> 
+                    團體開發中<span class="important-text">擅長介面設計與專案統籌</span>、享受解決問題的成就感，喜愛透過知識分享與同儕相互成長，期望將跨部門協作經驗於軟體協作中落實，成為互相激勵的團隊一份子。
+                </P>
             </section>
 
             <!-- skill -->
-            <section>  
-                <div id="skill" class="skill">
-                    <div class="title_big">SKILL</div>
-                    <div class="line"></div>
+            <section id="skill" class="skill">  
+                <div class="title_big">SKILL</div>
+                <div class="line"></div>
 
-                    <div class="section_skills">
-                        <!-- front-end -->
-                        <div class="skill_block front-end">
-                            <div class="title_sm">front-end</div>
-                            <ul>
-                                <li>
-                                    <i class="fa-brands fa-html5"></i>
-                                    <p>HTML5</p>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <p>CSS3</p>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-sass"></i>
-                                    <p>SASS(SCSS)</p>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-js"></i>
-                                    <p>JavaScript</p>
-                                </li>
-                                <li>
-                                    <i class="fa-regular fa-file-code"></i>
-                                    <p>JQuery</p>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-vuejs"></i>
-                                    <p>Vue.js</p>
-                                </li>  
-                                <li>
-                                    <i class="fa-regular fa-file-code"></i>
-                                    <p>AJAX(Axios/JQuery)</p>
-                                </li>
-                                <li>
-                                    <i class="fa-regular fa-file-code"></i>
-                                    <p>GSAP</p>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- back-end -->
-                        <div class="skill_block back-end" >
-                            <div class="title_sm">back-end</div>
-                            <ul>
-                                <li>
-                                    <i class="fa-brands fa-php"></i>
-                                    <p>php</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-database"></i>
-                                    <p>MySQL</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- soft-dev-tool -->
-                        <div class="skill_block software-dev">
-                            <div class="title_sm">software-dev tools</div>
-                            <ul>
-                                <li>
-                                    <i class="fa-brands fa-figma"></i>
-                                    <p>Figma</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-wrench"></i>
-                                    <p>Visual Studio</p>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-github"></i>
-                                    <p>GitHub / Sourcetree</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- others -->
-                        <div class="skill_block other-skill">
-                            <div class="title_sm">Others</div>
-                            <ul>
-                                <li>
-                                    <div class="skill_logo">Ai</div>
-                                    <p>Illustrator</p>
-                                </li>
-                                <li>
-                                    <div class="skill_logo">Ps</div>
-                                    <p>PhotoShop</p>
-                                </li>
-                                <li>
-                                    <div class="skill_logo">Id</div>
-                                    <p>InDesign</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-wrench"></i>
-                                    <p>AutoCAD</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-wrench"></i>
-                                    <p>Arc GIS</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-wrench"></i>
-                                    <p>Sketch Up</p>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-file-circle-check"></i>
-                                    <p>MicroSoft Office</p>
-                                </li>  
-                            </ul>
-                        </div>
-
-                        
-
+                <div class="section_skills">
+                    <!-- front-end -->
+                    <div class="skill_block front-end">
+                        <div class="title_sm">front-end</div>
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-html5"></i>
+                                <p>HTML5</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <p>CSS3</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-sass"></i>
+                                <p>SASS(SCSS)</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-js"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-file-code"></i>
+                                <p>JQuery</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-vuejs"></i>
+                                <p>Vue.js</p>
+                            </li>  
+                            <li>
+                                <i class="fa-regular fa-file-code"></i>
+                                <p>AJAX(Axios/JQuery)</p>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-file-code"></i>
+                                <p>GSAP</p>
+                            </li>
+                        </ul>
                     </div>
+                    
+                    <!-- back-end -->
+                    <div class="skill_block back-end" >
+                        <div class="title_sm">back-end</div>
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-php"></i>
+                                <p>php</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-database"></i>
+                                <p>MySQL</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- soft-dev-tool -->
+                    <div class="skill_block software-dev">
+                        <div class="title_sm">software-dev tools</div>
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-figma"></i>
+                                <p>Figma</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wrench"></i>
+                                <p>Visual Studio</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-github"></i>
+                                <p>GitHub / Sourcetree</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- others -->
+                    <div class="skill_block other-skill">
+                        <div class="title_sm">Others</div>
+                        <ul>
+                            <li>
+                                <div class="skill_logo">Ai</div>
+                                <p>Illustrator</p>
+                            </li>
+                            <li>
+                                <div class="skill_logo">Ps</div>
+                                <p>PhotoShop</p>
+                            </li>
+                            <li>
+                                <div class="skill_logo">Id</div>
+                                <p>InDesign</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wrench"></i>
+                                <p>AutoCAD</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wrench"></i>
+                                <p>Arc GIS</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wrench"></i>
+                                <p>Sketch Up</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-file-circle-check"></i>
+                                <p>MicroSoft Office</p>
+                            </li>  
+                        </ul>
+                    </div>
+
+                    
+
                 </div>
+                
             </section>
 
             <!-- Portfolio -->
-            <section>  
-                <div id="portfolio" class="portfolio">
+            <section id="portfolio" class="portfolio">  
+                <div class="title_big">PORTFOLIO</div>
+                <div class="line"></div>
 
-                    <div class="title_big">PORTFOLIO</div>
-                    <div class="line"></div>
-
-                    <div class="section_projects">
-                        <!-- project1 -->
-                        <div class="portfolio-item project1">
-                            <div class="card">
-                                <div class="image">
-                                  <img src="./images/HAKO-image.png">
-                                </div>
-    
-                                <div class="portfolio-description">
-                                  <h3 class="title_big">HAKO 盒食</h3>
-                                  <p><span class="important-text">HAKO盒食</span>是以 Vue.js + PHP + MySQL 開發的電商平台Demo，用戶在web上可以註冊或登入帳號，進行預約活動、訂購商品至購物車、進行結帳，並可察看使用者過去訂單資訊。設計此網站的動機是為了實踐對於建立軟體專案熟悉度並架設功能完整的網站。</p>
-    
-                                  <div class="btns">
-                                    
-                                      <a href="#" target="_blank" class="btn visit" id="btn_visit">
-                                        <p>Visit the Web</p>
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                      </a>
-    
-                                      <a href="#" target="_blank" class="btn github" id="btn_github">
-                                          <p>GitHub</p>
-                                          <i class="fa-brands fa-github"></i> 
-                                      </a>
-    
-                                  </div>
-                                </div>
+                <div class="section_projects">
+                    <!-- project1 -->
+                    <div class="portfolio-item project1">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/HAKO-image.png">
                             </div>
-                            <div class="project-info">
-                                <div class="tools">
-                                    <div class="title_sm">
-                                        Tools
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </div>
-                                    <div class="line"></div>
-                                    <p class="none">SCSS(SASS), Vue.js, PHP, MySQL</p>
-                                </div>
-                                <div class="methods">
-                                    <div class="title_sm">
-                                        Methods
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </div>
-                                    <div class="line"></div>
-                                    <ol class="none">
-                                        <li><span class="text_circle">1</span>透過 AJAX(axios) 技術建構商品fullCRUD 新增, 瀏覽, 編輯和刪除的功能。</li>
-                                        <li><span class="text_circle">2</span>將MySQL作為網頁數據庫, 使用PHP的MySQL語法及PDO來執行數據庫查詢和操作。</li>
-                                        <li><span class="text_circle">3</span>使用一對多關係將user, product, order三種關係的數據連結。</li>
-                                        <li><span class="text_circle">4</span>localStorge實現登出狀態加入購物車功能 ; 使用is.js工具驗證收件人資料 ; 驗證成功後AJAX回傳資料庫訂單數據。</li>
-                                        <li><span class="text_circle">5</span>透過SCSS界定component樣式 ; GSAP 實現視差滾動效果。</li>
-                                    </ol>
+
+                            <div class="portfolio-description">
+                                <h3 class="title_big">HAKO 盒食</h3>
+                                <p><span class="important-text">HAKO盒食</span>是以 Vue.js + PHP + MySQL 開發的電商平台Demo，用戶在web上可以註冊或登入帳號，進行預約活動、訂購商品至購物車、進行結帳，並可察看使用者過去訂單資訊。設計此網站的動機是為了實踐對於建立軟體專案熟悉度並架設功能完整的網站。</p>
+
+                                <div class="btns">
+                                
+                                    <a href="#" target="_blank" class="btn visit" id="btn_visit">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        <p>Visit the Web</p>
+                                    </a>
+
+                                    <a href="#" target="_blank" class="btn github" id="btn_github">
+                                        <i class="fa-brands fa-github"></i> 
+                                        <p>GitHub</p>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
-
-                        <!-- project2 -->
-                        <div class="portfolio-item project2">
-                            <div class="card">
-                                <div class="image">
-                                  <img src="./images/WFW-image.png">
+                        <div class="project-info">
+                            <div class="tools">
+                                <div class="title_sm">
+                                    Tools
+                                    <i class="fa-solid fa-chevron-down"></i>
                                 </div>
-    
-                                <div class="portfolio-description">
-                                  <h3 class="title_big">WFW 租賃平台</h3>
-                                  <p><span class="important-text">WFW</span>是一個專為自由工作者及企業所開發的空間租借平台，用戶可以瀏覽與租賃合適的辦公、聚會場所，查看體驗心得與網站規則。設計動機是為了實踐各種UI介面版型與RWD的掌握能力。</p>
-
-                                  <div class="btns">
-                                      <a href="#" target="_blank" class="btn visit" id="btn_visit">
-                                        <p>Visit the Web</p>
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                      </a>
-    
-                                      <a href="#" target="_blank" class="btn github" id="btn_github">
-                                          <p>GitHub</p>
-                                          <i class="fa-brands fa-github"></i> 
-                                      </a>
-    
-                                  </div>
-                                </div>
+                                <div class="line"></div>
+                                <p class="none">SCSS(SASS), Vue.js, PHP, MySQL</p>
                             </div>
-                            <div class="project-info">
-                                <div class="tools">
-                                    <div class="title_sm">
-                                        Tools
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </div>
-                                    <div class="line"></div>
-                                    <p class="none">HTML5, SCSS(SASS), JS(原生/jquery), Figma</p>
+                            <div class="methods">
+                                <div class="title_sm">
+                                    Methods
+                                    <i class="fa-solid fa-chevron-down"></i>
                                 </div>
-                                <div class="methods">
-                                    <div class="title_sm">
-                                        Methods
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </div>
-                                    <div class="line"></div>
-                                    <ol class="none">
-                                        <li><span class="text_circle">1</span>完整規劃7頁滿版式設計完整網頁 ; 以figma設計wireframe / mockup 繪製網站UI。</li>
-                                        <li><span class="text_circle">2</span>利用對比色做畫面切割變化，分頁做不同版型的組合 ; 區塊面狀及滿版突顯不同重點。</li>
-                                        <li><span class="text_circle">3</span>使用youtube API嵌入影片及輪播套件Owl Carousel生動化頁面資訊。</li>
-                                    </ol>
-                                </div>
+                                <div class="line"></div>
+                                <ol class="none">
+                                    <li><span class="text_circle">1</span>透過 AJAX(axios) 技術建構商品fullCRUD 新增, 瀏覽, 編輯和刪除的功能。</li>
+                                    <li><span class="text_circle">2</span>將MySQL作為網頁數據庫, 使用PHP的MySQL語法及PDO來執行數據庫查詢和操作。</li>
+                                    <li><span class="text_circle">3</span>使用一對多關係將user, product, order三種關係的數據連結。</li>
+                                    <li><span class="text_circle">4</span>localStorge實現登出狀態加入購物車功能 ; 使用is.js工具驗證收件人資料 ; 驗證成功後AJAX回傳資料庫訂單數據。</li>
+                                    <li><span class="text_circle">5</span>透過SCSS界定component樣式 ; GSAP 實現視差滾動效果。</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
-                </div> <!--portfolio-->
+
+                    <!-- project2 -->
+                    <div class="portfolio-item project2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/WFW-image.png">
+                            </div>
+
+                            <div class="portfolio-description">
+                                <h3 class="title_big">WFW 租賃平台</h3>
+                                <p><span class="important-text">WFW</span>是一個專為自由工作者及企業所開發的空間租借平台，用戶可以瀏覽與租賃合適的辦公、聚會場所，查看體驗心得與網站規則。設計動機是為了實踐各種UI介面版型與RWD的掌握能力。</p>
+
+                                <div class="btns">
+                                    <a href="#" target="_blank" class="btn visit" id="btn_visit">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        <p>Visit the Web</p>
+                                    </a>
+
+                                    <a href="#" target="_blank" class="btn github" id="btn_github">
+                                        <i class="fa-brands fa-github"></i> 
+                                        <p>GitHub</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="tools">
+                                <div class="title_sm">
+                                    Tools
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="line"></div>
+                                <p class="none">HTML5, SCSS(SASS), JS(原生/jquery), Figma</p>
+                            </div>
+                            <div class="methods">
+                                <div class="title_sm">
+                                    Methods
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="line"></div>
+                                <ol class="none">
+                                    <li><span class="text_circle">1</span>完整規劃7頁滿版式設計完整網頁 ; 以figma設計wireframe / mockup 繪製網站UI。</li>
+                                    <li><span class="text_circle">2</span>利用對比色做畫面切割變化，分頁做不同版型的組合 ; 區塊面狀及滿版突顯不同重點。</li>
+                                    <li><span class="text_circle">3</span>使用youtube API嵌入影片及輪播套件Owl Carousel生動化頁面資訊。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
 
 
@@ -437,10 +436,10 @@
                     <div class="job">
                         <div class="period">Apr 2020 - Dec 2022</div> 
                         <div class="jobName">
-                            <div class="title_sm">台灣世曦工程顧問股份有限公司，都市計畫專案工程師</div> 
+                            <div class="title_sm">台灣世曦工程顧問股份有限公司, 都市計畫工程師</div> 
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <ol class="none">
+                        <ol class="performance none">
                             <li>
                                 <span class="text_circle">1</span>
                                 <p>
@@ -450,7 +449,7 @@
                             <li>
                                 <span class="text_circle">2</span>
                                 <p>
-                                    公司ISO 9001 計畫稽核員、客戶對接窗口，確保計畫品質，成功取得同業主續約共 5+ 計畫。
+                                    <span class="important-text">公司ISO 9001 計畫稽核員、客戶專案對接窗口，確保計畫品質</span>，成功取得同業主續約共 5+ 計畫。
                                 </p>
                             </li>
                             <li>
@@ -462,7 +461,7 @@
                             <li>
                                 <span class="text_circle">4</span>
                                 <p>
-                                    協助嘉義縣專案獲得<span class="important-text">2020水環境大賞-水樣生活獎。
+                                    嘉義縣專案獲得<span class="important-text">2020水環境大賞-水樣生活獎。
                                 </p>
                                 </span>
                             </li>
@@ -479,31 +478,128 @@
                         </ol>
                     </div>
 
+                    <div class="job">
+                        <div class="period">Jun 2018 - Jun 2019</div> 
+                        <div class="jobName">
+                            <div class="title_sm">國立成功大學國土研究中心, 兼任助理研究員</div> 
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ol class="performance none">
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>
+                                    泰國專家學者 2019韌性城市專題人才工作坊。
+                                </p>
+                            </li> 
+                            <li>
+                                <span class="text_circle">2</span>
+                                <p>
+                                    2019台日韓越國際都市計劃研討會(ICAPPS 2019)
+                                </p>
+                            </li>
+                            <li>
+                                <span class="text_circle">4</span>
+                                <p>沙崙智慧綠能科學城籌劃團隊、參與台南蘭花生物科技園區、文化部再造歷史現場計畫。</p>
+                                </span>
+                            </li>
+                        </ol>
+                    </div>
 
-                    
+                    <div class="job">
+                        <div class="period">Jan 2017 - Aug 2017</div> 
+                        <div class="jobName">
+                            <div class="title_sm">新北市政府城鄉發展局, 約雇工程員</div> 
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ol class="performance none">
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>制定綠建築協議書、商業登記。</p>
+                            </li> 
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>新北市都市計畫委員會。</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="job">
+                        <div class="period">Jul 2015 - Jun 2016</div> 
+                        <div class="jobName">
+                            <div class="title_sm">華得廣告事業股份有限公司, 平面設計</div> 
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ol class="performance none">
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>客戶日商電器P牌、台灣食品業者之平面設計。</p>
+                            </li> 
+                            <li>
+                                <span class="text_circle">1</span>
+                                <p>日商電器P牌 2015冬季商品發表會、2016夏季商品發表會。</p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-
-                <div class="performance">
-
-                </div>
-                
             </section>         
-                        
-
-
-                        
-                    
-
-
-                
         </div><!-- container -->
 
-        
-        <!-- footer -->
-        <footer>
+        <!-- footer --><!-- Contact -->
+        <footer id="contact" class="footer contact">
 
-        </footer>
-        
+            <div class="title_md">Contact Me
+                <div class="line"></div>
+            </div>
+                
+            <div class="contact_theme">
+                <div class="footer_text">
+                    <div class="title_sm"><span class="important-text">Hi, there</span></div>
+                    <p>Thank you for visiting my web !  <br>
+                        If you are looking for web developer, <br>
+                        please feel free to contact me for more detail.
+                    </p>
+                </div>
+                
+                <div class="contact_info">
+                    <div class="contact_item">
+                        <i class="fa-solid fa-at"></i>
+                        <div class="title_sm">
+                            l7529374@gmail.com<br><span>( 首字為小寫 L )</span>
+                        </div>
+                    </div>
+                    <div class="contact_item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="title_sm">
+                            0978929787
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- media -->
+                <div class="media">
+                    <a class="media_item" target="_blank" href="https://www.cakeresume.com/me/l7529374">
+                        <i class="fa-solid fa-c"></i>
+                    </a>
+                    <a class="media_item" target="_blank" href="https://www.linkedin.com/in/henjouchien/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a class="media_item" target="_blank" href="https://github.com/chien1116">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a class="media_item" target="_blank" href="mailto:l7529374@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a class="media_item" target="_blank" href="https://codepen.io/collection/VYZxNY">
+                        <i class="fa-brands fa-codepen"></i>
+                    </a>
+                </div>
+
+
+            </div>
+            
+        </footer>  
+
     </div><!-- wrapper -->
     
     <!-- jquery -->

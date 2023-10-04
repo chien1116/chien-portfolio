@@ -1,5 +1,6 @@
 
 @import './reset/reset';
+@import './base/base';
 @import './base/color';
 @import './base/font';
 @import './mixin/mixin';
@@ -8,25 +9,30 @@
 // @import './layout/header';
 // @import './layout/footer';
 
-//
-$padding-t:18.75vw;
-$padding-p:10vw;
-
 
 
 //index
-*{outline: solid 1px red;}
+//*{outline: solid 1px red;}
 
 
 .wrapper{
     font-size: 16px;
     background-image: url(../images/bg.jpg);
     background-size: cover;
-    
+    background-position: top 0 left 0%;
 }
 section{
+    max-width:1920px;
     width: 100%;
     padding: 80px $padding-t;
+
+    @include p(){
+        padding: 80px $padding-p; 
+    }
+    @include m(){
+        padding:  40px $padding-m;
+    }
+
 }
 a{
     color: $white;
@@ -68,42 +74,102 @@ a{
 
 //header
 .header{
+    position: fixed;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     // JS控制 scroll
     height: 80px;
     width: 100%;
+    max-width:1920px;
     padding:0 $padding-p;
     font-size: 20px;
     // JS控制 scroll
-    background-color: $white;
+    background-color: rgba($white,1);
     box-shadow: 0 2px 20px rgba($black,.2);
+
+    transition: height 0.3s, background-color 0.3s;
+    @include m(){
+        padding: 0 $padding-m;
+    }
+
+    //JS控制滾動時加上
+    &.scrolled{
+        height: 48px;
+        background-color: rgba($white,.9);
+        // .header_menu_list{
+        //     .scroll-nav{
+        //         color: $white;
+        //     }
+        // }
+    }
 }
-.header_name{
-    font-family: serif;
+
+.header_bar{
+    width: 32px;
+    height: 32px;
+    border-radius: 16%;
+    cursor: pointer;
+    transition: .3s;
+    border: solid 1px $red;
+    font-size: 20px;
+    color: $red;
+    &:hover{
+        background-color: $red;
+        color: $white;
+    }
+    @include p(){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .header_menu_list{
     display: flex;
+    @include p(){
+        transition:transform .5s ease;
+        position: absolute;
+        left: 0;
+        bottom: 100px;  //關閉的狀態
+        //bottom: -280px; //打開的狀態
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        border-top: solid 1px #ccc;
+    }
     li{
         padding: 12px;
+        @include p(){
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        
     }
     .scroll-nav{
         color: $black;
+        transition: .3s;
+        &:hover,&:active{
+            color:$red;
+        }
+        @include p(){
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: $white;
+            &:hover,&:active{
+                background-color: #eeeeeef3;
+            }
+            
+        }
     }
 }
 
-// #home
-.layer{
-    height: 720px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.lead{
-    padding: 8px 0;
-}
+
 .fa-chevron-down{
     width: 40px;
     height: 40px;
@@ -111,31 +177,46 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
     color: $white;
     border: solid 1px $white;
     transition:.5s;
     &:hover{
         color: $red;
-        border-color: $red;;
+        border-color: $red;  
     }
 }
+
+// #home
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+    .scroll-nav{
+        animation: bounce .6s infinite;
+    }
+}
+.lead{
+    padding: 8px 0;
+    margin-bottom: 60px;
+}
+
 .photo{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 60px 0;
+    margin: 120px 0 80px;
 }
 .myName{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 600;
     padding: 20px 0;
+    margin-bottom: 0;
 }
 //about
 //skill
 .skill{
-    
 }
 .section_skills{
     display: flex;
@@ -144,16 +225,26 @@ a{
     justify-content: space-between;
 }
 .skill_block{
+    width: 100%;
     border: solid 5px rgba($white,.2);
     border-radius: 16px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    @include d(500px){
+        margin-bottom: 20px;
+    }
+    
 
     &.back-end,&.software-dev{
         width: 46%;
         margin: 40px 0;
+        @include d(500px){
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
     }
     ul{
         display: flex;
@@ -188,11 +279,17 @@ a{
 }
 //Portfolio
 .portfolio{
+    @include p(){
+        padding: 40px $padding-p;
+    }
     .card{
         display: flex;
         max-width: 720px;
-        max-height: 320px;
         margin: 0 auto;
+        @include p(){
+            flex-direction: column;
+        }
+        
         &:hover{
             .image{
                 left: 0;
@@ -207,6 +304,13 @@ a{
 
 .portfolio-item{
     margin-bottom: 80px;
+    &.project2{
+        margin-bottom: 0;
+    }
+    @include p(){
+        padding-bottom: 40px;
+        border-bottom: solid 1px rgba($white,.5);
+    }
     
     .image{
       transition:.5s;
@@ -217,8 +321,21 @@ a{
       overflow: hidden;
       display: flex;
       justify-content: center;
+      @include p(){
+        left: 0;
+        opacity:1;
+        width: 280px;  
+        height: 280px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba($red,.3);
+        margin: 0 auto;
+      }
       img{
-        width: 100%;
+        width: auto;
+        @include p(){
+            width: 100%;
+        }
+        
       } 
     }
     .title_big{
@@ -228,6 +345,11 @@ a{
         text-align: left;
         position: relative;
         left: -80px;
+        white-space: nowrap;
+        @include p(){
+            left: 0;
+            margin: 0 auto 32px;
+        }
     }
     .portfolio-description{
         padding: 32px 20px 0;
@@ -236,16 +358,31 @@ a{
         justify-content: space-between;
         position: relative;
         width: 50%;
+        @include p(){
+            width: 100%;
+            padding: 32px 0 0;
+        }
     }
     .btns{
         display: flex;
-        margin-top: 20px;
         justify-content: space-between;
+        @include d(1000px){
+            flex-direction: column;
+        }
+        @include p(){
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 20px;
+        }
     }
     .btn{
         display: flex;
         align-items: center;
         white-space: nowrap;
+        @include d(1000px){
+            margin-bottom: 10px;
+        }
+
         &:hover{
             i{
                 color: $red;
@@ -253,7 +390,8 @@ a{
             }
         }
         p{
-            margin-right: 12px;
+            margin-right: 20px;
+   
         }
         i{
             font-size: 24px;
@@ -262,7 +400,7 @@ a{
     }
 }
 .project-info{
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,7 +428,6 @@ a{
         }
     }
     .tools{
-        margin-bottom: 20px;
         width: 100%;
         text-align: center;
         p{
@@ -302,7 +439,7 @@ a{
         width: 100%;
     }
     ol{
-        width: 720px;
+        max-width: 720px;
         margin: 0 auto;
     }
     li{
@@ -316,8 +453,9 @@ a{
 
 // gizmo
 .gizmo{
-    padding: 40px 10vw;
+    padding: 40px $padding-p;
     position: relative;
+   
     &::after{
         content:"";
         width: 100%;
@@ -329,6 +467,7 @@ a{
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0.8) 90%, rgba(0,0,0,1) 100%);
 
     }
+
 }
 .gizmo_theme{
     display: flex;
@@ -339,6 +478,17 @@ a{
     width: 25%;
     overflow: hidden;
     position: relative;
+    @include t(){
+        width: 50%;
+    }
+    @include p(){
+        width: 80%;
+        margin: 0 auto;
+    }
+    @include d(600px){
+        width: 100%;
+    }
+    
     
     &:hover{
         .image::after{
@@ -351,7 +501,6 @@ a{
             img{
                 transform: scale(1.2);   
             }
-            
         }
         .fa-eye{
             opacity:0;
@@ -373,20 +522,20 @@ a{
             width: 100%;
             height: 100%;
             background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0) 100%);
-
-           
         }
         img{
             width: auto;
             transition: 1s;
             height: 100%;
+            @include t(){
+                height: 120%; 
+            }
             
         } 
         .fa-eye{
             transition: .5s ease-out;
             color:$white;
             position: absolute;
-            z-index: 100;
             font-size: 20px;
             background-color:rgba($red,.5);
             padding: 8px;
@@ -424,13 +573,15 @@ a{
         display: flex;
         flex-direction: column;
 
-        ol{
+        .performance{
             width:80%;
             margin: 0 auto;
+            @include m(){
+                width: 100%;
+            }
         }
         li{
             display: flex;
-            //align-items: flex-start;
             padding-bottom: 12px;
             color:#f5f5f5;
             line-height: 1.5;
@@ -441,6 +592,7 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: 1.5;
         &:hover{
             i{
                 animation: bounce .5s infinite;
@@ -448,6 +600,8 @@ a{
             }
         }
         .title_sm{
+            text-align: center;
+            width: 432px;
             padding: 40px 0;
             margin: 0;
         }
@@ -455,11 +609,142 @@ a{
             margin: 0;
             border: none; 
             cursor: pointer;
-            margin-left: 20px;
+            font-size: 12px;
+            padding: 20px;
+            margin-left: 10px;
         }
     }
     .period{
         text-align: center;
+        padding-top: 12px;
     }
 
+}
+
+
+//footer
+.footer{
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width:1920px;
+    padding:  80px $padding-p;
+    background-color: rgba(#f5f5f5,.8);
+    color:black;
+    @include p(){
+        padding:  40px $padding-p;
+    }
+    @include m(){
+        padding:  40px $padding-m;
+    }
+
+    .title_md{
+        color:$red;
+        text-align: center;
+        font-family: 'Alfa Slab One','Noto Sans TC';
+        font-weight: normal;
+        margin: 0;
+    }
+    .line{
+        
+    }
+    .footer_text{
+        width: 30%;
+        min-width: 336px;
+        @include d(1080px){
+            text-align: center;
+        }
+    }
+}
+//contact
+.contact{
+    
+   .contact_theme{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include d(1080px){
+            flex-direction: column;
+            align-items: center;
+        }
+        
+   }
+   .contact_info{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        @include d(1080px){
+            width: 80%;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        @include p(){
+            flex-direction: column;
+        }
+        
+        .contact_item{
+            display: flex;
+            justify-content: center;
+            i{
+                padding-top: 10px;
+                padding-right: 20px;
+                font-size: 20px;
+                line-height: 1.6;
+            }
+        }
+        .title_sm{
+            width: 208px;
+            line-height: 1.5;
+            margin: 0;
+            padding-top: 10px;
+            @include d(1080px){
+                padding-right: 40px;
+            }
+            span{
+                font-weight: normal;
+                font-size: 16px;
+            }
+        }
+   }
+}
+.media{
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    @include d(1080px){
+        width: 40%; 
+        justify-content: space-between;
+    }
+    @include d(1080px){
+        width: 336px;
+        margin-top: 10px;
+        padding-top: 32px;
+    }
+    @include p(){
+        border-top: solid 1px $black;
+    }
+    .media_item{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:$black;
+        font-size: 20px;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: solid 1px $black;
+        transition:.3s ease-in;
+        @include d(1080px){
+            margin-right: 0;
+        }
+        &:hover,&:active{
+            background-color: rgba($white,.5);
+            border:none;
+            color:$red;
+            box-shadow: 0 0 4px rgba($black,.2);
+        }
+    }
 }
