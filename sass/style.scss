@@ -311,13 +311,27 @@ a{
         padding-bottom: 40px;
         border-bottom: solid 1px rgba($white,.5);
     }
-    
+    .card_image{
+        position: relative;
+        .fa-eye{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 5;
+            color:$white;
+            font-size: 20px;
+            background-color:rgba($red,.5);
+            padding: 8px;
+            border-radius: 12px;
+        } 
+    }
     .image{
       transition:.5s;
       position: relative;
       left: 50px;
       opacity:.5;  
-      width: 50%;
+      width: 100%;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -335,8 +349,8 @@ a{
         @include p(){
             width: 100%;
         }
-        
-      } 
+      }
+      
     }
     .title_big{
         transition:.8s;
