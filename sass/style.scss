@@ -629,11 +629,11 @@ a{
     flex-direction: column;
     width: 100%;
     max-width:1920px;
-    padding:  80px $padding-p;
+    padding:  40px $padding-p;
     background-color: rgba(#f5f5f5,.8);
     color:black;
     @include p(){
-        padding:  40px $padding-p;
+        padding:  60px $padding-p;
     }
     @include m(){
         padding:  40px $padding-m;
@@ -677,8 +677,11 @@ a{
         @include d(1080px){
             width: 80%;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: solid 1px $black;
+
         }
         @include p(){
             flex-direction: column;
@@ -688,7 +691,6 @@ a{
             display: flex;
             justify-content: center;
             i{
-                padding-top: 10px;
                 padding-right: 20px;
                 font-size: 20px;
                 line-height: 1.6;
@@ -698,7 +700,6 @@ a{
             width: 208px;
             line-height: 1.5;
             margin: 0;
-            padding-top: 10px;
             @include d(1080px){
                 padding-right: 40px;
             }
@@ -719,12 +720,8 @@ a{
     }
     @include d(1080px){
         width: 336px;
-        margin-top: 10px;
-        padding-top: 32px;
     }
-    @include p(){
-        border-top: solid 1px $black;
-    }
+   
     .media_item{
         width: 40px;
         height: 40px;
