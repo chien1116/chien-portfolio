@@ -118,6 +118,10 @@ p {
   text-align: center;
 }
 
+* {
+  outline: solid 1px red;
+}
+
 .wrapper {
   font-size: 16px;
   background-image: url(../images/bg.jpg);
@@ -522,6 +526,11 @@ a {
 }
 .portfolio-item .btn p {
   margin-right: 20px;
+}
+@media screen and (max-width: 500px) {
+  .portfolio-item .btn p {
+    display: none;
+  }
 }
 .portfolio-item .btn i {
   font-size: 24px;
