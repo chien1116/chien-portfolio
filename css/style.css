@@ -118,10 +118,6 @@ p {
   text-align: center;
 }
 
-* {
-  outline: solid 1px red;
-}
-
 .wrapper {
   font-size: 16px;
   background-image: url(../images/bg.jpg);
